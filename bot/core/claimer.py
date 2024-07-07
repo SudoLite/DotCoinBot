@@ -292,8 +292,9 @@ class Claimer:
                     await asyncio.sleep(delay=3)
 
                 else:
-                    logger.info(f"Sleep 2min")
-                    await asyncio.sleep(delay=120)
+                    sleep = randint(600,900)
+                    logger.info(f"Sleep {sleep} seconds")
+                    await asyncio.sleep(delay=sleep)
 
 
 async def run_claimer(tg_client: Client, proxy: str | None):
